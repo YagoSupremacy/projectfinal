@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Sistema de Gerenciamento de Eventos</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Gerenciamento de Eventos</h1>
+        <div id="event-form">
+            <h2>Cadastrar Evento</h2>
+            <form onsubmit="createEvent(); return false;">
+                <input type="text" id="event-name" placeholder="Nome do Evento" required>
+                <input type="date" id="event-date" required>
+                <input type="text" id="event-location" placeholder="Local" required>
+                <textarea id="event-description" placeholder="Descrição" required></textarea>
+                <button type="submit">Cadastrar Evento</button>
+            </form>
+        </div>
+        <div id="event-list">
+            <h2>Eventos</h2>
+            <ul id="events"></ul>
+        </div>
+    </div>
+    <div id="auth-form">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button onclick="login()">Login</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
